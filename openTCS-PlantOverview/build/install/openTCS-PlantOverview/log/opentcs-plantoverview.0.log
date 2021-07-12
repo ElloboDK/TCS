@@ -1,0 +1,561 @@
+[20210707-13:17:43-429] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.20.0-SNAPSHOT (build date: 2021-07-05 10:01:40), customization '-' version - (build date: -), Java: 1.8.0_291, Oracle Corporation; JVM: 25.291-b10, Oracle Corporation; OS: Linux, amd64
+[20210707-13:17:43-690] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using default configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-baseline.properties...
+[20210707-13:17:43-714] WARNING main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-custom.properties not found, skipped.
+[20210707-13:17:43-717] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using overrides from supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview.properties...
+[20210707-13:17:43-729] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.reloadInterval(): Using configuration reload interval of 10000 ms.
+[20210707-13:17:43-734] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.configuration.cfg4j.CachedConfigurationSource source, org.opentcs.configuration.cfg4j.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20210707-13:17:43-774] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.loadgenerator.LoadGeneratorPanelModule
+[20210707-13:17:43-779] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.allocation.AllocationPanelModule
+[20210707-13:17:43-784] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.statistics.StatisticsPanelModule
+[20210707-13:17:43-873] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
+[20210707-13:17:44-060] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+[20210707-13:17:44-085] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderTypeSuggestionsModule
+[20210707-13:17:47-057] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20210707-13:17:52-425] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20210707-13:17:52-426] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20210707-13:17:52-427] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20210707-13:17:52-726] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20210707-13:21:44-492] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap" successfully persisted.
+[20210707-13:22:14-500] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap" successfully loaded from kernel.
+[20210707-13:49:26-518] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.20.0-SNAPSHOT (build date: 2021-07-05 10:01:40), customization '-' version - (build date: -), Java: 1.8.0_291, Oracle Corporation; JVM: 25.291-b10, Oracle Corporation; OS: Linux, amd64
+[20210707-13:49:28-080] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using default configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-baseline.properties...
+[20210707-13:49:28-155] WARNING main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-custom.properties not found, skipped.
+[20210707-13:49:28-160] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using overrides from supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview.properties...
+[20210707-13:49:28-173] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.reloadInterval(): Using configuration reload interval of 10000 ms.
+[20210707-13:49:28-215] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.configuration.cfg4j.CachedConfigurationSource source, org.opentcs.configuration.cfg4j.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20210707-13:49:28-508] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.loadgenerator.LoadGeneratorPanelModule
+[20210707-13:49:28-518] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.allocation.AllocationPanelModule
+[20210707-13:49:28-527] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.statistics.StatisticsPanelModule
+[20210707-13:49:28-597] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
+[20210707-13:49:28-631] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+[20210707-13:49:28-644] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderTypeSuggestionsModule
+[20210707-13:49:44-157] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20210707-13:49:48-940] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20210707-13:49:48-941] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20210707-13:49:48-942] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20210707-13:49:49-192] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20210707-13:55:55-087] INFO    AWT-EventQueue-0     o.o.g.application.OpenTCSView.stop()                   : GUI terminating...
+[20210707-13:59:14-194] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.20.0-SNAPSHOT (build date: 2021-07-05 10:01:40), customization '-' version - (build date: -), Java: 1.8.0_291, Oracle Corporation; JVM: 25.291-b10, Oracle Corporation; OS: Linux, amd64
+[20210707-13:59:14-333] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using default configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-baseline.properties...
+[20210707-13:59:14-347] WARNING main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-custom.properties not found, skipped.
+[20210707-13:59:14-348] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using overrides from supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview.properties...
+[20210707-13:59:14-353] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.reloadInterval(): Using configuration reload interval of 10000 ms.
+[20210707-13:59:14-355] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.configuration.cfg4j.CachedConfigurationSource source, org.opentcs.configuration.cfg4j.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20210707-13:59:14-373] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.loadgenerator.LoadGeneratorPanelModule
+[20210707-13:59:14-375] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.allocation.AllocationPanelModule
+[20210707-13:59:14-379] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.statistics.StatisticsPanelModule
+[20210707-13:59:14-381] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
+[20210707-13:59:14-383] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+[20210707-13:59:14-384] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderTypeSuggestionsModule
+[20210707-13:59:14-871] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20210707-13:59:16-628] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20210707-13:59:16-628] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20210707-13:59:16-629] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20210707-13:59:16-735] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20210707-14:05:59-176] INFO    AWT-EventQueue-0     o.o.g.application.OpenTCSView.stop()                   : GUI terminating...
+[20210707-17:45:04-144] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.20.0-SNAPSHOT (build date: 2021-07-05 10:01:40), customization '-' version - (build date: -), Java: 1.8.0_291, Oracle Corporation; JVM: 25.291-b10, Oracle Corporation; OS: Linux, amd64
+[20210707-17:45:04-500] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using default configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-baseline.properties...
+[20210707-17:45:04-544] WARNING main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-custom.properties not found, skipped.
+[20210707-17:45:04-547] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using overrides from supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview.properties...
+[20210707-17:45:04-568] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.reloadInterval(): Using configuration reload interval of 10000 ms.
+[20210707-17:45:04-574] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.configuration.cfg4j.CachedConfigurationSource source, org.opentcs.configuration.cfg4j.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20210707-17:45:04-650] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.loadgenerator.LoadGeneratorPanelModule
+[20210707-17:45:04-656] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.allocation.AllocationPanelModule
+[20210707-17:45:04-661] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.statistics.StatisticsPanelModule
+[20210707-17:45:04-668] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
+[20210707-17:45:04-672] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+[20210707-17:45:04-676] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderTypeSuggestionsModule
+[20210707-17:45:08-959] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20210707-17:45:15-939] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20210707-17:45:15-941] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20210707-17:45:15-942] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20210707-17:45:16-353] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20210707-18:06:57-437] INFO    AWT-EventQueue-0     o.o.g.application.OpenTCSView.stop()                   : GUI terminating...
+[20210708-09:18:13-792] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.20.0-SNAPSHOT (build date: 2021-07-05 10:01:40), customization '-' version - (build date: -), Java: 1.8.0_291, Oracle Corporation; JVM: 25.291-b10, Oracle Corporation; OS: Linux, amd64
+[20210708-09:18:13-876] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using default configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-baseline.properties...
+[20210708-09:18:13-883] WARNING main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-custom.properties not found, skipped.
+[20210708-09:18:13-884] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using overrides from supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview.properties...
+[20210708-09:18:13-887] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.reloadInterval(): Using configuration reload interval of 10000 ms.
+[20210708-09:18:13-889] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.configuration.cfg4j.CachedConfigurationSource source, org.opentcs.configuration.cfg4j.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20210708-09:18:13-900] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.loadgenerator.LoadGeneratorPanelModule
+[20210708-09:18:13-902] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.allocation.AllocationPanelModule
+[20210708-09:18:13-903] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.statistics.StatisticsPanelModule
+[20210708-09:18:13-905] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
+[20210708-09:18:13-906] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+[20210708-09:18:13-907] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderTypeSuggestionsModule
+[20210708-09:18:14-555] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20210708-09:18:16-979] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20210708-09:18:16-980] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20210708-09:18:16-980] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20210708-09:18:17-141] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20210708-09:19:02-075] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap" successfully persisted.
+[20210708-09:19:36-029] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap" successfully loaded from kernel.
+[20210708-15:54:21-303] SEVERE  AWT-EventQueue-0     o.o.u.logging.UncaughtExceptionLogger.uncaughtException(): Unhandled exception
+java.lang.NullPointerException
+	at org.opentcs.guing.components.tree.elements.UserObjectUtil.createContext(UserObjectUtil.java:83)
+	at org.opentcs.guing.application.OpenTCSView.restoreModelComponents(OpenTCSView.java:1134)
+	at org.opentcs.guing.components.tree.AbstractTreeViewPanel.restoreItems(AbstractTreeViewPanel.java:175)
+	at org.opentcs.guing.components.tree.ComponentsTreeViewPanel.pasteBufferedItems(ComponentsTreeViewPanel.java:49)
+	at org.opentcs.guing.components.tree.StandardActionTree.pasteBufferedItems(StandardActionTree.java:45)
+	at org.opentcs.guing.application.action.edit.PasteAction.actionPerformed(PasteAction.java:69)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:356)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Actions.actionPerformed(BasicMenuItemUI.java:811)
+	at javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1668)
+	at javax.swing.JComponent.processKeyBinding(JComponent.java:2882)
+	at javax.swing.JMenuBar.processBindingForKeyStrokeRecursive(JMenuBar.java:699)
+	at javax.swing.JMenuBar.processBindingForKeyStrokeRecursive(JMenuBar.java:706)
+	at javax.swing.JMenuBar.processBindingForKeyStrokeRecursive(JMenuBar.java:706)
+	at javax.swing.JMenuBar.processKeyBinding(JMenuBar.java:677)
+	at javax.swing.KeyboardManager.fireBinding(KeyboardManager.java:307)
+	at javax.swing.KeyboardManager.fireKeyboardAction(KeyboardManager.java:293)
+	at javax.swing.JComponent.processKeyBindingsForAllComponents(JComponent.java:2974)
+	at javax.swing.JComponent.processKeyBindings(JComponent.java:2966)
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2845)
+	at java.awt.Component.processEvent(Component.java:6316)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:835)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1103)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:974)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:800)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[20210708-15:54:21-926] SEVERE  AWT-EventQueue-0     o.o.u.logging.UncaughtExceptionLogger.uncaughtException(): Unhandled exception
+java.lang.NullPointerException
+	at org.opentcs.guing.components.tree.elements.UserObjectUtil.createContext(UserObjectUtil.java:83)
+	at org.opentcs.guing.application.OpenTCSView.restoreModelComponents(OpenTCSView.java:1134)
+	at org.opentcs.guing.components.tree.AbstractTreeViewPanel.restoreItems(AbstractTreeViewPanel.java:175)
+	at org.opentcs.guing.components.tree.ComponentsTreeViewPanel.pasteBufferedItems(ComponentsTreeViewPanel.java:49)
+	at org.opentcs.guing.components.tree.StandardActionTree.pasteBufferedItems(StandardActionTree.java:45)
+	at org.opentcs.guing.application.action.edit.PasteAction.actionPerformed(PasteAction.java:69)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:356)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Actions.actionPerformed(BasicMenuItemUI.java:811)
+	at javax.swing.SwingUtilities.notifyAction(SwingUtilities.java:1668)
+	at javax.swing.JComponent.processKeyBinding(JComponent.java:2882)
+	at javax.swing.JMenuBar.processBindingForKeyStrokeRecursive(JMenuBar.java:699)
+	at javax.swing.JMenuBar.processBindingForKeyStrokeRecursive(JMenuBar.java:706)
+	at javax.swing.JMenuBar.processBindingForKeyStrokeRecursive(JMenuBar.java:706)
+	at javax.swing.JMenuBar.processKeyBinding(JMenuBar.java:677)
+	at javax.swing.KeyboardManager.fireBinding(KeyboardManager.java:307)
+	at javax.swing.KeyboardManager.fireKeyboardAction(KeyboardManager.java:293)
+	at javax.swing.JComponent.processKeyBindingsForAllComponents(JComponent.java:2974)
+	at javax.swing.JComponent.processKeyBindings(JComponent.java:2966)
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2845)
+	at java.awt.Component.processEvent(Component.java:6316)
+	at java.awt.Container.processEvent(Container.java:2239)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1954)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:835)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:1103)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:974)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:800)
+	at java.awt.Component.dispatchEventImpl(Component.java:4760)
+	at java.awt.Container.dispatchEventImpl(Container.java:2297)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:760)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:84)
+	at java.awt.EventQueue$4.run(EventQueue.java:733)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:730)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[20210708-15:57:07-688] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210708-15:57:18-901] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210708-15:57:56-578] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210708-15:58:00-663] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210708-16:01:39-394] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.20.0-SNAPSHOT (build date: 2021-07-05 10:01:40), customization '-' version - (build date: -), Java: 1.8.0_291, Oracle Corporation; JVM: 25.291-b10, Oracle Corporation; OS: Linux, amd64
+[20210708-16:01:39-461] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using default configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-baseline.properties...
+[20210708-16:01:39-468] WARNING main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-custom.properties not found, skipped.
+[20210708-16:01:39-469] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using overrides from supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview.properties...
+[20210708-16:01:39-472] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.reloadInterval(): Using configuration reload interval of 10000 ms.
+[20210708-16:01:39-474] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.configuration.cfg4j.CachedConfigurationSource source, org.opentcs.configuration.cfg4j.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20210708-16:01:39-486] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.loadgenerator.LoadGeneratorPanelModule
+[20210708-16:01:39-488] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.allocation.AllocationPanelModule
+[20210708-16:01:39-489] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.statistics.StatisticsPanelModule
+[20210708-16:01:39-490] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
+[20210708-16:01:39-491] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+[20210708-16:01:39-492] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderTypeSuggestionsModule
+[20210708-16:01:39-948] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20210708-16:01:42-016] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20210708-16:01:42-017] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20210708-16:01:42-017] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20210708-16:01:42-139] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20210708-16:02:12-002] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210708-16:02:17-910] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210708-16:07:57-860] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.20.0-SNAPSHOT (build date: 2021-07-05 10:01:40), customization '-' version - (build date: -), Java: 1.8.0_291, Oracle Corporation; JVM: 25.291-b10, Oracle Corporation; OS: Linux, amd64
+[20210708-16:07:57-987] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using default configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-baseline.properties...
+[20210708-16:07:58-003] WARNING main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-custom.properties not found, skipped.
+[20210708-16:07:58-008] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using overrides from supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview.properties...
+[20210708-16:07:58-018] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.reloadInterval(): Using configuration reload interval of 10000 ms.
+[20210708-16:07:58-022] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.configuration.cfg4j.CachedConfigurationSource source, org.opentcs.configuration.cfg4j.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20210708-16:07:58-056] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.loadgenerator.LoadGeneratorPanelModule
+[20210708-16:07:58-060] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.allocation.AllocationPanelModule
+[20210708-16:07:58-064] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.statistics.StatisticsPanelModule
+[20210708-16:07:58-068] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
+[20210708-16:07:58-071] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+[20210708-16:07:58-073] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderTypeSuggestionsModule
+[20210708-16:07:58-914] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20210708-16:08:01-806] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20210708-16:08:01-808] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20210708-16:08:01-809] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20210708-16:08:01-925] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20210708-16:08:11-406] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210708-16:08:35-414] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210708-16:14:00-977] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap" successfully persisted.
+[20210708-16:14:17-487] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap" successfully loaded from kernel.
+[20210708-16:30:03-828] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.20.0-SNAPSHOT (build date: 2021-07-05 10:01:40), customization '-' version - (build date: -), Java: 1.8.0_291, Oracle Corporation; JVM: 25.291-b10, Oracle Corporation; OS: Linux, amd64
+[20210708-16:30:03-905] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using default configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-baseline.properties...
+[20210708-16:30:03-915] WARNING main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-custom.properties not found, skipped.
+[20210708-16:30:03-917] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using overrides from supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview.properties...
+[20210708-16:30:03-921] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.reloadInterval(): Using configuration reload interval of 10000 ms.
+[20210708-16:30:03-923] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.configuration.cfg4j.CachedConfigurationSource source, org.opentcs.configuration.cfg4j.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20210708-16:30:03-984] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.loadgenerator.LoadGeneratorPanelModule
+[20210708-16:30:03-985] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.allocation.AllocationPanelModule
+[20210708-16:30:03-987] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.statistics.StatisticsPanelModule
+[20210708-16:30:03-990] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
+[20210708-16:30:03-991] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+[20210708-16:30:03-992] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderTypeSuggestionsModule
+[20210708-16:30:04-473] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20210708-16:30:06-460] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20210708-16:30:06-461] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20210708-16:30:06-461] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20210708-16:30:06-612] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20210708-16:33:52-459] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap-2" successfully persisted.
+[20210708-16:33:54-842] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap-2" successfully persisted.
+[20210708-16:34:11-319] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap-2" successfully loaded from kernel.
+[20210708-16:37:35-645] SEVERE  KernelEventFetcher   o.o.g.exchange.KernelEventFetcher$EventFetcherTask.runActualTask(): Exception fetching events, logging out
+org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
+	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.findSuitableExceptionFor(AbstractRemoteServiceProxy.java:145)
+	at org.opentcs.access.rmi.services.RemoteKernelServicePortalProxy.fetchEvents(RemoteKernelServicePortalProxy.java:206)
+	at org.opentcs.guing.exchange.KernelEventFetcher$EventFetcherTask.runActualTask(KernelEventFetcher.java:188)
+	at org.opentcs.util.CyclicTask.run(CyclicTask.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.rmi.UnmarshalException: Error unmarshaling return header; nested exception is: 
+	java.io.EOFException
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:254)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:163)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy52.fetchEvents(Unknown Source)
+	at org.opentcs.access.rmi.services.RemoteKernelServicePortalProxy.fetchEvents(RemoteKernelServicePortalProxy.java:203)
+	... 3 more
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readByte(DataInputStream.java:267)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:240)
+	... 8 more
+
+[20210708-16:37:35-647] WARNING KernelEventFetcher   o.o.g.transport.TransportOrdersContainer.fetchOrdersIfOnline(): Exception fetching transport orders
+org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
+	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.checkServiceAvailability(AbstractRemoteServiceProxy.java:120)
+	at org.opentcs.access.rmi.services.RemoteTCSObjectServiceProxy.fetchObjects(RemoteTCSObjectServiceProxy.java:60)
+	at org.opentcs.guing.transport.TransportOrdersContainer.fetchOrdersIfOnline(TransportOrdersContainer.java:176)
+	at org.opentcs.guing.transport.TransportOrdersContainer.initOrders(TransportOrdersContainer.java:132)
+	at org.opentcs.guing.transport.TransportOrdersContainer.onEvent(TransportOrdersContainer.java:115)
+	at org.opentcs.util.event.SimpleEventBus.onEvent(SimpleEventBus.java:37)
+	at org.opentcs.guing.exchange.OpenTCSEventDispatcher.onEvent(OpenTCSEventDispatcher.java:186)
+	at org.opentcs.util.event.SimpleEventBus.onEvent(SimpleEventBus.java:37)
+	at org.opentcs.guing.exchange.KernelEventFetcher$EventFetcherTask.runActualTask(KernelEventFetcher.java:209)
+	at org.opentcs.util.CyclicTask.run(CyclicTask.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+
+[20210708-16:37:35-648] WARNING AWT-EventQueue-0     o.o.g.transport.TransportOrdersContainer.fetchOrdersIfOnline(): Exception fetching transport orders
+org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
+	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.checkServiceAvailability(AbstractRemoteServiceProxy.java:120)
+	at org.opentcs.access.rmi.services.RemoteTCSObjectServiceProxy.fetchObjects(RemoteTCSObjectServiceProxy.java:60)
+	at org.opentcs.guing.transport.TransportOrdersContainer.fetchOrdersIfOnline(TransportOrdersContainer.java:176)
+	at org.opentcs.guing.transport.TransportOrdersContainer.initOrders(TransportOrdersContainer.java:132)
+	at org.opentcs.guing.transport.TransportOrdersContainer.onEvent(TransportOrdersContainer.java:109)
+	at org.opentcs.util.event.SimpleEventBus.onEvent(SimpleEventBus.java:37)
+	at org.opentcs.guing.application.OpenTCSView$2.run(OpenTCSView.java:1585)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[20210708-16:37:35-727] WARNING AWT-EventQueue-0     o.o.g.transport.TransportOrdersContainerPanel.fetchOrdersIfOnline(): Exception fetching transport orders
+org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
+	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.checkServiceAvailability(AbstractRemoteServiceProxy.java:120)
+	at org.opentcs.access.rmi.services.RemoteTCSObjectServiceProxy.fetchObjects(RemoteTCSObjectServiceProxy.java:60)
+	at org.opentcs.guing.transport.TransportOrdersContainerPanel.fetchOrdersIfOnline(TransportOrdersContainerPanel.java:195)
+	at org.opentcs.guing.transport.TransportOrdersContainerPanel.initView(TransportOrdersContainerPanel.java:145)
+	at org.opentcs.guing.transport.TransportOrdersContainerPanel.onEvent(TransportOrdersContainerPanel.java:131)
+	at org.opentcs.util.event.SimpleEventBus.onEvent(SimpleEventBus.java:37)
+	at org.opentcs.guing.application.OpenTCSView$2.run(OpenTCSView.java:1585)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[20210708-16:37:35-728] WARNING AWT-EventQueue-0     o.o.g.transport.OrderSequencesContainerPanel.fetchSequencesIfOnline(): Exception fetching sequences from kernel
+org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
+	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.checkServiceAvailability(AbstractRemoteServiceProxy.java:120)
+	at org.opentcs.access.rmi.services.RemoteTCSObjectServiceProxy.fetchObjects(RemoteTCSObjectServiceProxy.java:60)
+	at org.opentcs.guing.transport.OrderSequencesContainerPanel.fetchSequencesIfOnline(OrderSequencesContainerPanel.java:141)
+	at org.opentcs.guing.transport.OrderSequencesContainerPanel.initView(OrderSequencesContainerPanel.java:134)
+	at org.opentcs.guing.transport.OrderSequencesContainerPanel.onEvent(OrderSequencesContainerPanel.java:120)
+	at org.opentcs.util.event.SimpleEventBus.onEvent(SimpleEventBus.java:37)
+	at org.opentcs.guing.application.OpenTCSView$2.run(OpenTCSView.java:1585)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[20210708-16:37:35-730] WARNING KernelEventFetcher   o.o.a.r.services.RemoteKernelServicePortalProxy.logout(): Not logged in, doing nothing.
+[20210708-16:38:43-870] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap-2" successfully persisted.
+[20210708-16:38:49-365] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap-2" successfully loaded from kernel.
+[20210708-16:39:54-634] SEVERE  KernelEventFetcher   o.o.g.exchange.KernelEventFetcher$EventFetcherTask.runActualTask(): Exception fetching events, logging out
+org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
+	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.findSuitableExceptionFor(AbstractRemoteServiceProxy.java:145)
+	at org.opentcs.access.rmi.services.RemoteKernelServicePortalProxy.fetchEvents(RemoteKernelServicePortalProxy.java:206)
+	at org.opentcs.guing.exchange.KernelEventFetcher$EventFetcherTask.runActualTask(KernelEventFetcher.java:188)
+	at org.opentcs.util.CyclicTask.run(CyclicTask.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.rmi.UnmarshalException: Error unmarshaling return header; nested exception is: 
+	java.io.EOFException
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:254)
+	at sun.rmi.server.UnicastRef.invoke(UnicastRef.java:163)
+	at java.rmi.server.RemoteObjectInvocationHandler.invokeRemoteMethod(RemoteObjectInvocationHandler.java:235)
+	at java.rmi.server.RemoteObjectInvocationHandler.invoke(RemoteObjectInvocationHandler.java:180)
+	at com.sun.proxy.$Proxy52.fetchEvents(Unknown Source)
+	at org.opentcs.access.rmi.services.RemoteKernelServicePortalProxy.fetchEvents(RemoteKernelServicePortalProxy.java:203)
+	... 3 more
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readByte(DataInputStream.java:267)
+	at sun.rmi.transport.StreamRemoteCall.executeCall(StreamRemoteCall.java:240)
+	... 8 more
+
+[20210708-16:39:54-635] WARNING KernelEventFetcher   o.o.g.transport.TransportOrdersContainer.fetchOrdersIfOnline(): Exception fetching transport orders
+org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
+	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.checkServiceAvailability(AbstractRemoteServiceProxy.java:120)
+	at org.opentcs.access.rmi.services.RemoteTCSObjectServiceProxy.fetchObjects(RemoteTCSObjectServiceProxy.java:60)
+	at org.opentcs.guing.transport.TransportOrdersContainer.fetchOrdersIfOnline(TransportOrdersContainer.java:176)
+	at org.opentcs.guing.transport.TransportOrdersContainer.initOrders(TransportOrdersContainer.java:132)
+	at org.opentcs.guing.transport.TransportOrdersContainer.onEvent(TransportOrdersContainer.java:115)
+	at org.opentcs.util.event.SimpleEventBus.onEvent(SimpleEventBus.java:37)
+	at org.opentcs.guing.exchange.OpenTCSEventDispatcher.onEvent(OpenTCSEventDispatcher.java:186)
+	at org.opentcs.util.event.SimpleEventBus.onEvent(SimpleEventBus.java:37)
+	at org.opentcs.guing.exchange.KernelEventFetcher$EventFetcherTask.runActualTask(KernelEventFetcher.java:209)
+	at org.opentcs.util.CyclicTask.run(CyclicTask.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+
+[20210708-16:39:54-635] WARNING AWT-EventQueue-0     o.o.g.transport.TransportOrdersContainer.fetchOrdersIfOnline(): Exception fetching transport orders
+org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
+	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.checkServiceAvailability(AbstractRemoteServiceProxy.java:120)
+	at org.opentcs.access.rmi.services.RemoteTCSObjectServiceProxy.fetchObjects(RemoteTCSObjectServiceProxy.java:60)
+	at org.opentcs.guing.transport.TransportOrdersContainer.fetchOrdersIfOnline(TransportOrdersContainer.java:176)
+	at org.opentcs.guing.transport.TransportOrdersContainer.initOrders(TransportOrdersContainer.java:132)
+	at org.opentcs.guing.transport.TransportOrdersContainer.onEvent(TransportOrdersContainer.java:109)
+	at org.opentcs.util.event.SimpleEventBus.onEvent(SimpleEventBus.java:37)
+	at org.opentcs.guing.application.OpenTCSView$2.run(OpenTCSView.java:1585)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[20210708-16:39:54-662] WARNING AWT-EventQueue-0     o.o.g.transport.TransportOrdersContainerPanel.fetchOrdersIfOnline(): Exception fetching transport orders
+org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
+	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.checkServiceAvailability(AbstractRemoteServiceProxy.java:120)
+	at org.opentcs.access.rmi.services.RemoteTCSObjectServiceProxy.fetchObjects(RemoteTCSObjectServiceProxy.java:60)
+	at org.opentcs.guing.transport.TransportOrdersContainerPanel.fetchOrdersIfOnline(TransportOrdersContainerPanel.java:195)
+	at org.opentcs.guing.transport.TransportOrdersContainerPanel.initView(TransportOrdersContainerPanel.java:145)
+	at org.opentcs.guing.transport.TransportOrdersContainerPanel.onEvent(TransportOrdersContainerPanel.java:131)
+	at org.opentcs.util.event.SimpleEventBus.onEvent(SimpleEventBus.java:37)
+	at org.opentcs.guing.application.OpenTCSView$2.run(OpenTCSView.java:1585)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[20210708-16:39:54-663] WARNING AWT-EventQueue-0     o.o.g.transport.OrderSequencesContainerPanel.fetchSequencesIfOnline(): Exception fetching sequences from kernel
+org.opentcs.components.kernel.services.ServiceUnavailableException: Remote service unreachable
+	at org.opentcs.access.rmi.services.AbstractRemoteServiceProxy.checkServiceAvailability(AbstractRemoteServiceProxy.java:120)
+	at org.opentcs.access.rmi.services.RemoteTCSObjectServiceProxy.fetchObjects(RemoteTCSObjectServiceProxy.java:60)
+	at org.opentcs.guing.transport.OrderSequencesContainerPanel.fetchSequencesIfOnline(OrderSequencesContainerPanel.java:141)
+	at org.opentcs.guing.transport.OrderSequencesContainerPanel.initView(OrderSequencesContainerPanel.java:134)
+	at org.opentcs.guing.transport.OrderSequencesContainerPanel.onEvent(OrderSequencesContainerPanel.java:120)
+	at org.opentcs.util.event.SimpleEventBus.onEvent(SimpleEventBus.java:37)
+	at org.opentcs.guing.application.OpenTCSView$2.run(OpenTCSView.java:1585)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:301)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:74)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:205)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[20210708-16:39:54-665] WARNING KernelEventFetcher   o.o.a.r.services.RemoteKernelServicePortalProxy.logout(): Not logged in, doing nothing.
+[20210708-16:41:42-669] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap-2" successfully persisted.
+[20210708-16:41:47-863] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap-2" successfully loaded from kernel.
+[20210708-16:53:44-770] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap-2" successfully persisted.
+[20210708-16:53:48-450] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap-2" successfully loaded from kernel.
+[20210708-18:03:10-866] INFO    AWT-EventQueue-0     o.o.g.application.OpenTCSView.stop()                   : GUI terminating...
+[20210709-09:04:44-428] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.20.0-SNAPSHOT (build date: 2021-07-05 10:01:40), customization '-' version - (build date: -), Java: 1.8.0_291, Oracle Corporation; JVM: 25.291-b10, Oracle Corporation; OS: Linux, amd64
+[20210709-09:04:44-557] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using default configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-baseline.properties...
+[20210709-09:04:44-573] WARNING main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-custom.properties not found, skipped.
+[20210709-09:04:44-574] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using overrides from supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview.properties...
+[20210709-09:04:44-579] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.reloadInterval(): Using configuration reload interval of 10000 ms.
+[20210709-09:04:44-581] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.configuration.cfg4j.CachedConfigurationSource source, org.opentcs.configuration.cfg4j.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20210709-09:04:44-622] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.loadgenerator.LoadGeneratorPanelModule
+[20210709-09:04:44-623] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.allocation.AllocationPanelModule
+[20210709-09:04:44-625] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.statistics.StatisticsPanelModule
+[20210709-09:04:44-635] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
+[20210709-09:04:44-648] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+[20210709-09:04:44-649] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderTypeSuggestionsModule
+[20210709-09:04:45-154] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20210709-09:04:47-164] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20210709-09:04:47-164] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20210709-09:04:47-165] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20210709-09:04:47-268] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20210709-09:05:43-551] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-09:05:50-053] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210709-14:53:00-233] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap-2" successfully persisted.
+[20210709-14:53:03-978] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "testmap-2" successfully loaded from kernel.
+[20210709-15:30:14-541] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-15:30:26-053] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210709-15:39:41-571] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-15:39:59-871] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-15:40:12-480] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210709-16:15:14-836] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-16:15:18-445] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210709-16:15:32-766] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-16:15:37-685] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210709-16:22:07-186] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-16:22:11-174] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210709-16:24:32-597] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-16:24:37-166] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-16:24:49-724] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210709-16:26:57-981] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-16:27:05-354] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-16:27:07-695] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210709-16:27:56-535] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-16:27:59-077] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210709-16:53:17-760] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210709-16:53:23-491] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210709-17:46:43-992] INFO    AWT-EventQueue-0     o.o.g.application.OpenTCSView.stop()                   : GUI terminating...
+[20210712-09:13:41-549] INFO    main                 o.o.util.Environment.logSystemInfo()                   : openTCS baseline version: 4.20.0-SNAPSHOT (build date: 2021-07-05 10:01:40), customization '-' version - (build date: -), Java: 1.8.0_291, Oracle Corporation; JVM: 25.291-b10, Oracle Corporation; OS: Linux, amd64
+[20210712-09:13:41-666] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using default configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-baseline.properties...
+[20210712-09:13:41-677] WARNING main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview-defaults-custom.properties not found, skipped.
+[20210712-09:13:41-678] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.buildSource(): Using overrides from supplementary configuration file /home/sage/OpenTCS-4.2/openTCS-4.20.0-src/openTCS-PlantOverview/build/install/openTCS-PlantOverview/./config/opentcs-plantoverview.properties...
+[20210712-09:13:41-682] INFO    main                 o.o.c.cfg4j.Cfg4jConfigurationBindingProvider.reloadInterval(): Using configuration reload interval of 10000 ms.
+[20210712-09:13:41-684] INFO    main                 o.c.provider.ConfigurationProviderBuilder.build()      : Initializing ConfigurationProvider with org.opentcs.configuration.cfg4j.CachedConfigurationSource source, org.opentcs.configuration.cfg4j.PeriodicalReloadStrategy reload strategy and org.cfg4j.source.context.environment.DefaultEnvironment environment
+[20210712-09:13:41-756] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.loadgenerator.LoadGeneratorPanelModule
+[20210712-09:13:41-760] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.allocation.AllocationPanelModule
+[20210712-09:13:41-763] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.plugins.panels.statistics.StatisticsPanelModule
+[20210712-09:13:41-784] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.DefaultImportersExportersModule
+[20210712-09:13:41-797] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.PropertySuggestionsModule
+[20210712-09:13:41-798] INFO    main                 o.o.guing.RunPlantOverview.findRegisteredModules()     : Integrating injection module org.opentcs.guing.transport.OrderTypeSuggestionsModule
+[20210712-09:13:42-786] WARNING main                 o.o.guing.DefaultPlantOverviewInjectionModule.configureSocketConnections(): SSL encryption disabled, connections will not be secured!
+[20210712-09:13:47-816] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.loadgenerator.ContinuousLoadPanelFactory
+[20210712-09:13:47-818] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.allocation.ResourceAllocationPanelFactory
+[20210712-09:13:47-819] INFO    main                 o.o.g.util.PanelRegistry.<init>()                      : Setting up plugin panel factory: org.opentcs.guing.plugins.panels.statistics.StatisticsPanelFactory
+[20210712-09:13:47-954] INFO    main                 o.o.g.exchange.KernelEventFetcher.initialize()         : Initializing...
+[20210712-09:17:39-563] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully persisted.
+[20210712-09:17:46-684] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210712-10:33:53-431] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
+[20210712-10:50:44-313] INFO    AWT-EventQueue-0     o.o.g.application.StatusPanel.setLogMessage()          : Model "unnamed" successfully loaded from kernel.
