@@ -8,7 +8,7 @@ import java.net.Socket;
 
 
 /**
- * @author jxl
+ * @author Jin xin lei
  * @date 2021/6/18 下午2:09
  */
 public class SocketClient {

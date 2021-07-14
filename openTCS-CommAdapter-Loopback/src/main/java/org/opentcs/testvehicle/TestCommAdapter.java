@@ -1,19 +1,21 @@
 package org.opentcs.testvehicle;
 
 import com.google.inject.assistedinject.Assisted;
+
+import java.util.Arrays;
 import java.util.List;
 import static java.util.Objects.requireNonNull;
 import javax.inject.Inject;
 import org.opentcs.data.model.Vehicle;
 import org.opentcs.data.order.Route.Step;
 import org.opentcs.drivers.vehicle.BasicVehicleCommAdapter;
+import org.opentcs.drivers.vehicle.LoadHandlingDevice;
 import org.opentcs.drivers.vehicle.MovementCommand;
 import org.opentcs.util.CyclicTask;
 import org.opentcs.util.ExplainedBoolean;
 
 /**
- *
- * @author zjw
+ * @author Jin xin lei
  */
 public class TestCommAdapter extends BasicVehicleCommAdapter {
 
@@ -129,6 +131,8 @@ public class TestCommAdapter extends BasicVehicleCommAdapter {
 
                 //运行Step，略
                 if (!curCommand.isWithoutOperation()) {
+                    String operation = curCommand.getOperation();
+                    sendOperation(operation);
                     //运行操作（上料或者下料，略）
                 }
                 if (getSentQueue().size() <= 1 && getCommandQueue().isEmpty()) {
@@ -162,5 +166,27 @@ public class TestCommAdapter extends BasicVehicleCommAdapter {
             getProcessModel().setVehicleState(Vehicle.State.IDLE);
             socketClient.close();
         }
+
+        private void sendOperation(String operation){
+            if (operation == ""){
+                return;
+            }
+            socketClient.connect();
+            getProcessModel().setVehicleState(Vehicle.State.EXECUTING);
+            System.out.println("send to" + socketClient.host + ": "+ socketClient.port + " Operation: " + operation);
+            socketClient.send(operation);
+            if (operation.equals("LOAD")) {
+                getProcessModel().setVehicleLoadHandlingDevices(
+                        Arrays.asList(new LoadHandlingDevice("default", true)));
+            }
+            else if (operation.equals("UNLOAD")) {
+                getProcessModel().setVehicleLoadHandlingDevices(
+                        Arrays.asList(new LoadHandlingDevice("default", false)));
+            }
+            getProcessModel().setVehicleState(Vehicle.State.IDLE);
+            socketClient.close();
+
+        }
     }
 }
+

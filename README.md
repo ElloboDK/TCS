@@ -48,10 +48,19 @@ TCS调度车辆并向实体车辆发送socket指令的大体流程如下：
 3. PlantOverview
 
 ## 运行方式：
-运行顺序：Kernel必须第一个运行，剩下两个不固定
+运行顺序：Kernel必须在KernelControlCenter之前运行，PlantOverview无所谓
 
-主要分两种：
+运行方法主要分两种：
 * 直接编译运行：
     IDEA中依次运行上述三个Gradle项目中的   `Tasks` -> `application` -> `run`
 * 运行编译后的.sh文件
-    .sh位于(以kernel为例)： `~/openTCS-Kernel/build/install/openTCS-Kernel/startKernel.sh`
+    .sh文件位于(以kernel为例)： `~/openTCS-Kernel/build/install/openTCS-Kernel/startKernel.sh`
+  
+操作流程：
+
+1. 编辑地图或加载地图 `File` -> `Load Model`
+2. 持久化地图到内核中（加载地图） `File` -> `Persist Model in the kernel`
+3. 切换至操作模式 `File` -> `Mode` -> `Operating Mode`
+4. 在车辆控制中心开启车辆 `Kernel Control Center` -> `Vehicle Driver` -> `Enabled`
+5. 修改车辆接受信息类型 `Plant Overview` -> `Vehicles` -> 车辆右键 -> `Change integration level` -> `to utilize this vehicle for transport orders`
+6. 添加运输订单 `Action` -> `Create transport order`
