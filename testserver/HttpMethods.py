@@ -111,10 +111,11 @@ class HttpTpo:
 
     def getloadcmd(self, pos):
         """获取去指定地点的装货任务"""
-        return self.getcmd(pos, "MOVE")
+        return self.getcmd(pos, "LOAD")
 
     def getunloadcmd(self, pos):
-        pass
+        return self.getcmd(pos, "UNLOAD")
+
 
     def gettpo(self, vehicle, poslist):
         """获取运输订单数据"""
