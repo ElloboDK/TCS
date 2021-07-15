@@ -13,6 +13,8 @@ port = 2049
 serversocket.bind((host, port))
 serversocket.listen(5)
 
+operationlist = ["LOAD", "UNLOAD"]
+
 while True:
 	clientsocket,addr = serversocket.accept()      
 	print("connected: ",clientsocket)
@@ -30,7 +32,9 @@ while True:
 				msg2 = "ENTER," + msg1[-1] + "|"
 			elif(msg1[0] == "ASK"):
 				msg2 = "ENTER,23|"	
-			
+			elif(msg1[0] in operationlist):
+				msg2 = "DONE|"
+
 			time.sleep(1)
 			clientsocket.sendall(bytes(msg2.encode('utf-8')))
 			print ("send: ", msg2)

@@ -8,6 +8,8 @@ import time
 import copy
 import threading
 
+from requests.models import parse_url
+
 # HTTP TransportOrder
 class HttpTpo:
 
@@ -90,66 +92,86 @@ class HttpTpo:
         """判断车辆是否是闲置状态"""
         return self.getonevehicleinfo(vehicle)["state"] == "IDLE"
 
-
     def getvehicles(self):
         """获取车辆信息"""
         msgs = self.getvehiclesinfo()
         for msg in msgs:
             self.vehicles.append(msg["name"])
     
-    def getcmd(self, pos, op):
+    def getcmd(self, pos, op, prop = []):
         """获取需要发送的任务信息"""
         return {
             "locationName": pos,
             "operation": op,
-            "properties": []
+            "properties": prop
         }
 
     def getmovecmd(self, pos):
         """获取去指定地点的移动任务"""
         return self.getcmd(pos, "MOVE")
 
+    def getmovecmdlist(self, poslist):
+        """获取去指定地点的移动任务列表"""
+        mvlist = []
+        for pos in poslist:
+            mvlist.append(self.getmovecmd(pos))
+        return mvlist
+
     def getloadcmd(self, pos):
         """获取去指定地点的装货任务"""
-        return self.getcmd(pos, "LOAD")
+        prop = [{
+            "key" : "worklocationname",
+            "value" : pos
+        }]
+        return self.getcmd(pos, "LOAD", prop)
 
     def getunloadcmd(self, pos):
-        return self.getcmd(pos, "UNLOAD")
+        """获取去指定地点的卸货任务"""
+        prop = [{
+            "key" : "worklocationname",
+            "value" : pos
+        }]
+        return self.getcmd(pos, "UNLOAD", prop)
 
-
-    def gettpo(self, vehicle, poslist):
+    def gettpodata(self, vehicle, cmdlist):
         """获取运输订单数据"""
         data = {
             "deadline": "2022-05-17T06:42:40.396Z", #deadline需要修改
             "intendedVehicle": vehicle,
             "destinations": []
         }
-        for pos in poslist:
-            data["destinations"].append(self.getmovecmd(pos))
+        for cmd in cmdlist:
+            data["destinations"].append(cmd)
         return data
 
-    def sendtpo(self, vehicle, poslist):
+    def sendtpo(self, vehicle, cmdlist):
         """发送运输订单"""
         uuid = self.getuuid()
         url = "http://127.0.0.1:55200/v1/transportOrders/" + uuid
         headers = {'Content-Type': 'application/json'}
-        data = self.gettpo(vehicle, poslist)
+        data = self.gettpodata(vehicle, cmdlist)
+        print(data)
         r = requests.post(url, data = json.dumps(data), headers = headers)
         print(r.status_code, r.content)
         return (r, uuid)
 
-    def sendallvehicletpo(self, poslist):
+    def sendallvehicletpo(self, cmdlist):
         """给所有车辆发送同一运输订单"""
         rlist = []
         for vehicle in self.vehicles:
-            (r, uuid) = self.sendtpo(vehicle, poslist)
+            r = self.sendtpo(vehicle, cmdlist)
             rlist.append(r)
         return rlist
 
+    def sendallvehiclepos(self, pos):
+        """给所有车辆发送去同一点位的订单"""
+        cmdlist = [self.getmovecmd(pos)]
+        self.sendallvehicletpo(cmdlist)
+
     def sendallvehiclestartpos(self):
         """给所有车辆发送返回出发点的运输订单"""
-        for i in range(0, 3):
-            self.sendtpo(self.vehicles[i], [self.startpos[i]])
+        for i in range(len(self.vehicles)):
+            self.sendtpo(self.vehicles[i], self.getmovecmdlist([self.startpos[i]]))
 
     def reset(self):
         """取消所有订单，并让车辆返回起点"""
@@ -162,7 +184,6 @@ class HttpTpo:
             if(self.loadlist[0][i] == 1):
                 return i
 
-    # one by one 前一辆执行完成才会对后一辆发送任务
     def sendvehicleloadtpoobo(self, outpos, nextpos):
         """逐一对车辆发送装货订单
         
@@ -172,18 +193,16 @@ class HttpTpo:
         nextpos : 任务结束后的下一点位
         """
         for i in range(0, 3):
-            poslist = [self.workpos[0][i]]
-            poslist = poslist + outpos
-
-            (r, uuid) = self.sendtpo(self.vehicles[i], poslist)
+            cmdlist = []
+            cmdlist.append(self.getloadcmd(self.storelist[0][i]))
+            cmdlist.append(self.getmovecmd(outpos))
+            (r, uuid) = self.sendtpo(self.vehicles[i], cmdlist)
 
             while True:
                 status = self.gettpostatusbyUUID(uuid)
-                print(uuid, status)
                 if(status == "FINISHED"):
-
-                    temp = copy.deepcopy(nextpos)
-                    self.sendtpo(self.vehicles[i], temp)
+                    cmdlist = [self.getmovecmd(nextpos)]
+                    self.sendtpo(self.vehicles[i], cmdlist)
                     self.vehicleloaded[i] = 1
                     i += 1
                     break
@@ -200,8 +219,9 @@ class HttpTpo:
         nextpos : 任务结束后的下一点位
         """
         for i in range(0, 3):
-            poslist = [self.workpos[1][i]]
-            poslist = poslist + outpos
+            cmdlist = []
+            cmdlist.append(self.getloadcmd(self.storelist[1][i]))
+            cmdlist.append(self.getmovecmd(outpos))
             
             while True:
                 if(self.ifvehicleIDLE(self.vehicles[i]) and self.vehicleloaded[i] == 1):
@@ -209,16 +229,14 @@ class HttpTpo:
                 else:
                     time.sleep(1)
 
-            (r, uuid) = self.sendtpo(self.vehicles[i], poslist)
+            (r, uuid) = self.sendtpo(self.vehicles[i], cmdlist)
 
             while True:
                 status = self.gettpostatusbyUUID(uuid)
-                print(uuid, status)
                 if(status == "FINISHED"):
-
-                    temp = copy.deepcopy(nextpos)
-                    temp.append(self.startpos[i])
-                    self.sendtpo(self.vehicles[i], temp)
+                    cmdlist = [self.getmovecmd(nextpos)]
+                    cmdlist.append(self.getmovecmd(self.startpos[i]))
+                    self.sendtpo(self.vehicles[i], cmdlist)
                     self.vehicleloaded[i] = 0
                     i += 1
                     break
@@ -226,11 +244,14 @@ class HttpTpo:
                     time.sleep(1)
 
     def test(self):
-        print(self.ifvehicleIDLE("Vehicle-0001"))
-
+        cmdlist = [self.getloadcmd(self.storelist[0][0])]
+        self.sendtpo("Vehicle-0001", cmdlist)
+        self.sendallvehiclestartpos()
 
 if __name__ == '__main__':
     # 基础订单格式
+    ###########################################################################
+    
     url = "http://127.0.0.1:55200/v1/transportOrders/" + str(uuid.uuid4()).replace("-", "")
 
     data = {
@@ -255,30 +276,25 @@ if __name__ == '__main__':
 
     ###########################################################################
 
-    nextpos = ["43"]
     httptpo = HttpTpo()
 
-    httptpo.sendallvehicletpo(["41"])
+    # httptpo.sendallvehiclepos("41")
 
-    # httptpo.sendvehicleloadtpoobo(["43"], ["50"])
-    # httptpo.sendallvehicletpo(["50"])
-    # httptpo.sendvehicleunloadtpoobo(["47"], ["45"])
+    # httptpo.sendvehicleloadtpoobo("43", "49")
+    # httptpo.sendallvehiclepos("45")
 
-    thread1 = threading.Thread(target = httptpo.sendvehicleloadtpoobo, args = [["43"], ["50"]])
-    thread2 = threading.Thread(target = httptpo.sendvehicleunloadtpoobo, args = [["47"], ["45"]])
+    # httptpo.sendvehicleunloadtpoobo("47", "45")
+
+    httptpo.sendallvehiclepos("41")
+
+    thread1 = threading.Thread(target = httptpo.sendvehicleloadtpoobo, args = ["43", "50"])
+    thread2 = threading.Thread(target = httptpo.sendvehicleunloadtpoobo, args = ["47", "45"])
     
     thread1.start()
     thread2.start()
 
+    # httptpo.sendallvehiclestartpos
+
     # httptpo.reset()
 
     # httptpo.test()
-
-    # httptpo.sendvehicletpoobo(poslist)
-
-    # (r, uuid) = httptpo.sendtpo(poslist)
-    # print(r.status_code, r.content)
-
-    # httptpo.sendallvehicletpo(poslist)
-    # for r in rlist:
-    #     print(r.status_code, r.content)
