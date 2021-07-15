@@ -2,6 +2,8 @@ package org.opentcs.testvehicle;
 
 
 import org.opentcs.drivers.vehicle.MovementCommand;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.net.Socket;
@@ -12,6 +14,7 @@ import java.net.Socket;
  * @date 2021/6/18 下午2:09
  */
 public class SocketClient {
+    private static final Logger LOG = LoggerFactory.getLogger(SocketClient.class);
     public static final String DEFAULT_HOST = "localhost";
     public static final int DEFAULT_PORT = 2048;
     private Socket socket;
@@ -41,7 +44,7 @@ public class SocketClient {
     public boolean connect(){
         try {
             this.socket = new Socket(host, port);
-            System.out.println("客户端启动成功");
+            LOG.info("SocketClient {} : {} start", host, port);
             this.in = socket.getInputStream();
             this.out = socket.getOutputStream();
             return true;
@@ -61,11 +64,6 @@ public class SocketClient {
             System.out.println("Close Connection Error:" + e.getMessage());
         }
         return false;
-    }
-
-    public void send(MovementCommand cmd){
-        // TODO MovementCommand 转换为协议格式
-
     }
 
     public String send(String message){

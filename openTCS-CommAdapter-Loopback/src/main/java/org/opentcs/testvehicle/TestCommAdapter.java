@@ -13,12 +13,15 @@ import org.opentcs.drivers.vehicle.LoadHandlingDevice;
 import org.opentcs.drivers.vehicle.MovementCommand;
 import org.opentcs.util.CyclicTask;
 import org.opentcs.util.ExplainedBoolean;
+import org.opentcs.virtualvehicle.LoopbackCommunicationAdapter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Jin xin lei
  */
 public class TestCommAdapter extends BasicVehicleCommAdapter {
-
+    private static final Logger LOG = LoggerFactory.getLogger(TestCommAdapter.class);
     private TestAdapterComponentsFactory componentsFactory;
     private Vehicle vehicle;
     private boolean initialized;
@@ -131,9 +134,11 @@ public class TestCommAdapter extends BasicVehicleCommAdapter {
 
                 //运行Step，略
                 if (!curCommand.isWithoutOperation()) {
+                    //运行操作（上料或者下料，略）
+                    System.out.println((curCommand.getProperties()).get("worklocationname"));
+
                     String operation = curCommand.getOperation();
                     sendOperation(operation);
-                    //运行操作（上料或者下料，略）
                 }
                 if (getSentQueue().size() <= 1 && getCommandQueue().isEmpty()) {
                     getProcessModel().setVehicleState(Vehicle.State.IDLE);
@@ -159,7 +164,7 @@ public class TestCommAdapter extends BasicVehicleCommAdapter {
             socketClient.connect();
             String destinationPoint = step.getDestinationPoint().getName();
             getProcessModel().setVehicleState(Vehicle.State.EXECUTING);
-            System.out.println("send to" + socketClient.host + ": "+ socketClient.port + ": MOVE," + destinationPoint);
+            LOG.info("send to : {} : {} MOVE,{}", socketClient.host, socketClient.port, destinationPoint);
             String str = socketClient.send("MOVE," + destinationPoint);
             String currentPoint = str.split(",")[1];
             getProcessModel().setVehiclePosition(currentPoint);
@@ -173,7 +178,7 @@ public class TestCommAdapter extends BasicVehicleCommAdapter {
             }
             socketClient.connect();
             getProcessModel().setVehicleState(Vehicle.State.EXECUTING);
-            System.out.println("send to" + socketClient.host + ": "+ socketClient.port + " Operation: " + operation);
+            LOG.info("send to : {} : {} Operation: {}", socketClient.host, socketClient.port, operation);
             socketClient.send(operation);
             if (operation.equals("LOAD")) {
                 getProcessModel().setVehicleLoadHandlingDevices(
@@ -185,7 +190,6 @@ public class TestCommAdapter extends BasicVehicleCommAdapter {
             }
             getProcessModel().setVehicleState(Vehicle.State.IDLE);
             socketClient.close();
-
         }
     }
 }
